@@ -1,0 +1,13 @@
+@media print {
+    #newsletter {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logos {
+        display: none;
+    }
+}

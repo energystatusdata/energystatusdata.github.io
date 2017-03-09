@@ -1,0 +1,68 @@
+div.main {
+    padding-top: 0;
+}
+
+.logos {
+    /*background-color: #70ad47;*/
+    background: white;
+    text-align: center;
+}
+.logos img {
+    height: 70px;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+#logo-gi, #logo-unipassau {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo-gi {
+    background-image: url(../img/logo-gi.png);
+    width: 198px;
+    height: 70px;
+}
+
+#logo-unipassau {
+    background-image: url(../img/logo-unipassau.png);
+    width: 262px;
+    height: 70px;
+}
+
+@media only screen and (max-width: 479px) {
+    #logo-gi {
+        max-width: 20%;
+    }
+}
+
+@media only screen and (max-width: 1139px) {
+    #logo-gi {
+        background-image: url(../img/logo-gi-schmal.jpg);
+    }
+
+    #logo-unipassau {
+        background-image: url(../img/logo-unipassau-schmal.png);
+    }
+}
+
+@media only screen and (max-width: 1139px) {
+    .logos img {
+        max-width: 20%;
+        height: auto;
+        padding: 2px;
+        margin: 2px;
+
+    }
+
+    .logos {
+        width: 90vw;
+        margin: 1em auto;
+        left: 0;
+        text-align: justify;
+        text-align-last: justify;
+        white-space: nowrap;
+    }
+}
