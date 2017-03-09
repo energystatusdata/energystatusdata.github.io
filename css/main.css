@@ -250,6 +250,7 @@ div.speakers:after {
 div.speaker img {
     width: 150px;
     border-radius:100%;
+    padding: 0 30px;
 }
 
 div.speakername {
