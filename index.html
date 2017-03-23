@@ -114,40 +114,105 @@ Prof. Harmut Schmeck (KIT)
 Prof. Veit Hagenmeyer (KIT)
 Anke Weidlich (Offenburg)
 -->
+        <script>
+            $(function() {
+                $(".speakers div").click(function() {
+                    var hadClass = $(this).hasClass("expanded");
+                    $(".speakers div").removeClass("expanded");
+                    if (!hadClass) {
+                        $(this).addClass("expanded");
+                    }
+                });
+            })
+        </script>
+
         <div class="speakers">
             <div class="speaker">
-                <img src="img/speakers/demeer.png" />
-                <div class="speakername">Prof. Hermann De Meer<br />(University of Passau)</div>
+                <div class="portrait">
+                    <img src="img/speakers/demeer.png" />
+                    <div class="speakername">Prof. Hermann De Meer<br />(University of Passau)</div>
+                </div>
+
+                <div class="biography">
+                    <p>Bacon ipsum dolor amet meatball jerky ball tip flank landjaeger pancetta porchetta short ribs, hamburger jowl picanha t-bone bresaola corned beef. Strip steak short loin andouille ribeye pork belly pork chop flank. Brisket corned beef spare ribs pork loin ground round ribeye. Filet mignon pig short loin chuck jowl ham swine picanha shoulder leberkas frankfurter flank rump. Pancetta flank salami shank. Biltong short ribs kevin, tail sausage prosciutto pancetta t-bone. Shank fatback pork, pork loin spare ribs shoulder meatloaf leberkas strip steak meatball doner.</p>
+                </div>
             </div>
 
             <div class="speaker">
-                <img src="img/speakers/keshav.png" />
-                <div class="speakername">Prof. Srinivasan Keshav<br />(University of Waterloo)</div>
+                <div class="portrait">
+                    <img src="img/speakers/keshav.png" />
+                    <div class="speakername">Prof. Srinivasan Keshav<br />(University of Waterloo)</div>
+                </div>
+
+                <div class="biography">
+                <p>Professor S. Keshav received a B.Tech in Computer Science and Engineering from IIT Delhi in 1986 and a Ph.D. in Computer Science from the University of California, Berkeley in 1991. He was subsequently a researcher at AT&T Bell Laboratories and, from 1996 to 1999, an Associate Professor at Cornell University. In 1999 he left academia to co-found Ensim Corporation and GreenBorder Technologies Inc. He was an Associate Professor at the University of Waterloo from 2003 to 2008 and has been a Professor since, holding a Canada Research Chair (2004-14) and the Cisco Chair in Smart Grid (2012-17). An awardee of the Director's Gold Medal from IIT Delhi, the Sakrison Prize from UC Berkeley, two Test of Time awards from ACM SIGCOMM, and Best Paper awards at both ACM SIGCOMM and ACM MOBICOM, he is the co-director of the Information Systems and Science for Energy Laboratory, author of two graduate textbooks on computer networking, an Alfred P. Sloan Fellow, an ACM Fellow, and currently Chair of ACM SIGCOMM.</p>
+               </div>
             </div>
 
             <div class="speaker">
-                <img src="img/speakers/pierson.png" />
-                <div class="speakername">Prof. Jean Marc Pierson<br />(University of Toulouse)</div>
+                <div class="portrait">
+                    <img src="img/speakers/pierson.png" />
+                    <div class="speakername">Prof. Jean Marc Pierson<br />(University of Toulouse)</div>
+                </div>
+
+                <div class="biography">
+                    <p>Bacon ipsum dolor amet meatball jerky ball tip flank landjaeger pancetta porchetta short ribs, hamburger jowl picanha t-bone bresaola corned beef. Strip steak short loin andouille ribeye pork belly pork chop flank. Brisket corned beef spare ribs pork loin ground round ribeye. Filet mignon pig short loin chuck jowl ham swine picanha shoulder leberkas frankfurter flank rump. Pancetta flank salami shank. Biltong short ribs kevin, tail sausage prosciutto pancetta t-bone. Shank fatback pork, pork loin spare ribs shoulder meatloaf leberkas strip steak meatball doner.</p>
+                </div>
             </div>
 
             <div class="speaker">
-                <img src="img/speakers/lehnhoff.png" />
-                <div class="speakername">Prof. Sebastian Lehnhoff<br />(University of Oldenburg)</div>
+                <div class="portrait">
+                    <img src="img/speakers/lehnhoff.png" />
+                    <div class="speakername">Prof. Sebastian Lehnhoff<br />(University of Oldenburg)</div>
+                </div>
+
+                <div class="biography">
+                    <p>Sebastian Lehnhoff is a Full Professor for Energy Informatics at the University of Oldenburg. He received his doctorate at the TU Dortmund University in 2009. Prof. Lehnhoff is a member of the executive board of the OFFIS Institute for Information Technology and speaker of its Energy R&amp;D division. He is speaker of the section &ldquo;Energy Informatics&rdquo; within the German Informatics Society (GI), assoc. editor of the IEEE Computer Society’s Computing and Smart Grid Special Technical Community as well as an active member of numerous committees and working groups focusing on ICT in future Smart Grids. He is an honorary professor of the School of Information Technology and Electrical Engineering at the University of Queensland. Prof. Lehnhoff is elected chair of the of the IEEE CA4EPI Working Group P2030.4, and chairman of the architecture and quality committee of the openKONSEQUENZ industry consortium for the development of open source software in power system operation. Prof. Lehnhoff is author of over 100 refereed and peer-reviewed scientific publications.</p>
+
+                <p>His research interests focus on the large-scale integration of decentralized, renewable energy sources into the electricity supply system in combination with the politically motivated reorganization of corporate structures and business processes. The Energy Informatics group in Oldenburg develops ICT-technologies for a future reliable, robust, profitable electricity supply system based on renewable energies &ndash; the Smart Grid. Key issues are:
+
+                    <ul>
+                        <li>Open communication standards and data models to ensure the interoperability of IT-architectures.</li>
+                        <li>Real-time methods for automating the distribution network to enable distributed plants at lower voltage levels to provide ancillary services.</li>
+                        <li>Distributed algorithms for decentralized resource planning within distribution networks to increase flexibility.</li>
+                        <li>Methods and tools to assess and support changing ICT-corporate architectures of energy supply protagonists.</li>
+                        <li>Methods for simulation and automated analysis of large-scale integrated multi-domain energy systems.</li>
+                    </ul>
+                </p>
+                </div>
             </div>
 
             <div class="speaker">
-                <img src="img/speakers/schmeck.png" />
-                <div class="speakername">Prof. Harmut Schmeck<br />(KIT)</div>
+                <div class="portrait">
+                    <img src="img/speakers/schmeck.png" />
+                    <div class="speakername">Prof. Harmut Schmeck<br />(KIT)</div>
+                </div>
+
+                <div class="biography">
+                <p>Hartmut Schmeck studied at the Universities of Kiel (Germany) and Waterloo (Canada). He got his academic degrees (Dipl. Inform., Dr.rer.nat., Dr. habil) at Kiel. Since 1991 he is a Full Professor of Applied Informatics at the Karlsruhe Institute of Technology - KIT. He is (co-)author of more than 200 publications on advanced algorithms and architectures, in particular on nature-inspired methods in optimisation, algorithms for reconfigurable architectures, and, more recently, on self-organising, adaptive systems applied to energy and traffic systems. He has been program and conference chair for numerous international workshops and conferences and coordinator of the German priority research program SPP 1183 on &ldquo;Organic Computing&rdquo;. As a principal investigator of several cooperative projects in various funding programmes he is pushing the development of intelligent systems in tomorrow's energy systems and for electric mobility, shaping the new discipline of &ldquo;Energy Informatics&rdquo;, in particular as a director of the FZI Research Center for Information Technology.</p>
+                </div>
             </div>
 
             <div class="speaker">
-                <img src="img/speakers/hagenmeyer.png" />
-                <div class="speakername">Prof. Veit Hagenmeyer<br />(KIT)</div>
+                <div class="portrait">
+                    <img src="img/speakers/hagenmeyer.png" />
+                    <div class="speakername">Prof. Veit Hagenmeyer<br />(KIT)</div>
+                </div>
+
+                <div class="biography">
+                    <p>Bacon ipsum dolor amet meatball jerky ball tip flank landjaeger pancetta porchetta short ribs, hamburger jowl picanha t-bone bresaola corned beef. Strip steak short loin andouille ribeye pork belly pork chop flank. Brisket corned beef spare ribs pork loin ground round ribeye. Filet mignon pig short loin chuck jowl ham swine picanha shoulder leberkas frankfurter flank rump. Pancetta flank salami shank. Biltong short ribs kevin, tail sausage prosciutto pancetta t-bone. Shank fatback pork, pork loin spare ribs shoulder meatloaf leberkas strip steak meatball doner.</p>
+                </div>
             </div>
 
             <div class="speaker">
-                <img src="img/speakers/weidlich.png" />
-                <div class="speakername">Anke Weidlich<br />(Offenburg)</div>
+                <div class="portrait">
+                    <img src="img/speakers/weidlich.png" />
+                    <div class="speakername">Anke Weidlich<br />(Offenburg)</div>
+                </div>
+
+                <div class="biography">
+                <p>[Insert biography here]</p>
+                </div>
             </div>
 
         </div>
