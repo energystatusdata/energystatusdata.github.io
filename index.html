@@ -119,6 +119,13 @@ Anke Weidlich (Offenburg)
                 $(".speakers div").click(function() {
                     var hadClass = $(this).hasClass("expanded");
                     $(".speakers div").removeClass("expanded");
+                    $("#speakerhighlight").empty();
+                    $("#speakerhighlight").append($(this).clone());
+
+                    $('html, body').animate({
+                        scrollTop: $("#speakerhighlight").offset().top - 50
+                    }, 200);
+
                     if (!hadClass) {
                         $(this).addClass("expanded");
                     }
@@ -214,8 +221,9 @@ Anke Weidlich (Offenburg)
                 <p>[Insert biography here]</p>
                 </div>
             </div>
-
         </div>
+
+        <div id="speakerhighlight"></div>
 
         <a name="registration" class="anchor"></a>
         <h3>Registration</h3>
