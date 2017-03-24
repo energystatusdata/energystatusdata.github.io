@@ -123,7 +123,7 @@ Anke Weidlich (Offenburg)
                     $("#speakerhighlight").append($(this).clone());
 
                     $('html, body').animate({
-                        scrollTop: $("#speakerhighlight").offset().top - 50
+                        scrollTop: $("div.speakers").offset().top - 50
                     }, 200);
 
                     if (!hadClass) {
