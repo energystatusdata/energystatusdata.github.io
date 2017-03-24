@@ -107,6 +107,7 @@ nav ul li a {
         position: fixed;
         left: 0px;
         top: 0px;
+        display: none;
     }
 }
 
