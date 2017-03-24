@@ -105,6 +105,7 @@
 
         <a name="speakers" class="anchor"></a>
         <h3>Speakers</h3>
+        <!--<div style="text-align:center;">Click speakers for more information.</div>-->
         <!--
         Prof. Hermann De Meer (University of Passau)
 Prof. Srinivasan Keshav (University of Waterloo)
@@ -115,19 +116,40 @@ Prof. Veit Hagenmeyer (KIT)
 Anke Weidlich (Offenburg)
 -->
         <script>
+            function scrollTo(element) {
+                if (typeof element == "string") {
+                    element = $(element);
+                }
+
+                $('html, body').animate({
+                    scrollTop: element.offset().top - 50
+                }, 200);
+            }
+
             $(function() {
-                $(".speakers div").click(function() {
-                    var hadClass = $(this).hasClass("expanded");
+                var lastSelectedSpeakerElement = undefined;
+
+                $(".speakers .portrait").append('<div class="downbutton">&#9660;</div>');
+                var collapse = function(andScroll) {
                     $(".speakers div").removeClass("expanded");
-                    $("#speakerhighlight").empty();
-                    $("#speakerhighlight").append($(this).clone());
+                    $("#speakerhighlight .content").empty();
+                    $("#speakerhighlight").css("display", "none");
 
-                    $('html, body').animate({
-                        scrollTop: $("div.speakers").offset().top - 50
-                    }, 200);
+                    if (andScroll && lastSelectedSpeakerElement) {
+                        scrollTo(lastSelectedSpeakerElement);
+                    }
+                };
 
-                    if (!hadClass) {
+                $("#speakerhighlight").click(collapse);
+                $(".speakers div.speaker").click(function() {
+                    var expanded = $(this).hasClass("expanded");
+                    collapse(expanded);
+                    if (!expanded) {
+                        $("#speakerhighlight").css("display", "block");
+                        scrollTo("#speakerhighlight");
                         $(this).addClass("expanded");
+                        $("#speakerhighlight .content").append($(this).clone());
+                        lastSelectedSpeakerElement = $(this);
                     }
                 });
             })
@@ -152,7 +174,7 @@ Anke Weidlich (Offenburg)
                 </div>
 
                 <div class="biography">
-                <p>Professor S. Keshav received a B.Tech in Computer Science and Engineering from IIT Delhi in 1986 and a Ph.D. in Computer Science from the University of California, Berkeley in 1991. He was subsequently a researcher at AT&T Bell Laboratories and, from 1996 to 1999, an Associate Professor at Cornell University. In 1999 he left academia to co-found Ensim Corporation and GreenBorder Technologies Inc. He was an Associate Professor at the University of Waterloo from 2003 to 2008 and has been a Professor since, holding a Canada Research Chair (2004-14) and the Cisco Chair in Smart Grid (2012-17). An awardee of the Director's Gold Medal from IIT Delhi, the Sakrison Prize from UC Berkeley, two Test of Time awards from ACM SIGCOMM, and Best Paper awards at both ACM SIGCOMM and ACM MOBICOM, he is the co-director of the Information Systems and Science for Energy Laboratory, author of two graduate textbooks on computer networking, an Alfred P. Sloan Fellow, an ACM Fellow, and currently Chair of ACM SIGCOMM.</p>
+                    <p><strong>Professor S. Keshav</strong> received a B.Tech in Computer Science and Engineering from IIT Delhi in 1986 and a Ph.D. in Computer Science from the University of California, Berkeley in 1991. He was subsequently a researcher at AT&T Bell Laboratories and, from 1996 to 1999, an Associate Professor at Cornell University. In 1999 he left academia to co-found Ensim Corporation and GreenBorder Technologies Inc. He was an Associate Professor at the University of Waterloo from 2003 to 2008 and has been a Professor since, holding a Canada Research Chair (2004-14) and the Cisco Chair in Smart Grid (2012-17). An awardee of the Director's Gold Medal from IIT Delhi, the Sakrison Prize from UC Berkeley, two Test of Time awards from ACM SIGCOMM, and Best Paper awards at both ACM SIGCOMM and ACM MOBICOM, he is the co-director of the Information Systems and Science for Energy Laboratory, author of two graduate textbooks on computer networking, an Alfred P. Sloan Fellow, an ACM Fellow, and currently Chair of ACM SIGCOMM.</p>
                </div>
             </div>
 
@@ -174,7 +196,7 @@ Anke Weidlich (Offenburg)
                 </div>
 
                 <div class="biography">
-                    <p>Sebastian Lehnhoff is a Full Professor for Energy Informatics at the University of Oldenburg. He received his doctorate at the TU Dortmund University in 2009. Prof. Lehnhoff is a member of the executive board of the OFFIS Institute for Information Technology and speaker of its Energy R&amp;D division. He is speaker of the section &ldquo;Energy Informatics&rdquo; within the German Informatics Society (GI), assoc. editor of the IEEE Computer Society’s Computing and Smart Grid Special Technical Community as well as an active member of numerous committees and working groups focusing on ICT in future Smart Grids. He is an honorary professor of the School of Information Technology and Electrical Engineering at the University of Queensland. Prof. Lehnhoff is elected chair of the of the IEEE CA4EPI Working Group P2030.4, and chairman of the architecture and quality committee of the openKONSEQUENZ industry consortium for the development of open source software in power system operation. Prof. Lehnhoff is author of over 100 refereed and peer-reviewed scientific publications.</p>
+                    <p><strong>Sebastian Lehnhoff</strong> is a Full Professor for Energy Informatics at the University of Oldenburg. He received his doctorate at the TU Dortmund University in 2009. Prof. Lehnhoff is a member of the executive board of the OFFIS Institute for Information Technology and speaker of its Energy R&amp;D division. He is speaker of the section &ldquo;Energy Informatics&rdquo; within the German Informatics Society (GI), assoc. editor of the IEEE Computer Society’s Computing and Smart Grid Special Technical Community as well as an active member of numerous committees and working groups focusing on ICT in future Smart Grids. He is an honorary professor of the School of Information Technology and Electrical Engineering at the University of Queensland. Prof. Lehnhoff is elected chair of the of the IEEE CA4EPI Working Group P2030.4, and chairman of the architecture and quality committee of the openKONSEQUENZ industry consortium for the development of open source software in power system operation. Prof. Lehnhoff is author of over 100 refereed and peer-reviewed scientific publications.</p>
 
                 <p>His research interests focus on the large-scale integration of decentralized, renewable energy sources into the electricity supply system in combination with the politically motivated reorganization of corporate structures and business processes. The Energy Informatics group in Oldenburg develops ICT-technologies for a future reliable, robust, profitable electricity supply system based on renewable energies &ndash; the Smart Grid. Key issues are:
 
@@ -196,7 +218,7 @@ Anke Weidlich (Offenburg)
                 </div>
 
                 <div class="biography">
-                <p>Hartmut Schmeck studied at the Universities of Kiel (Germany) and Waterloo (Canada). He got his academic degrees (Dipl. Inform., Dr.rer.nat., Dr. habil) at Kiel. Since 1991 he is a Full Professor of Applied Informatics at the Karlsruhe Institute of Technology - KIT. He is (co-)author of more than 200 publications on advanced algorithms and architectures, in particular on nature-inspired methods in optimisation, algorithms for reconfigurable architectures, and, more recently, on self-organising, adaptive systems applied to energy and traffic systems. He has been program and conference chair for numerous international workshops and conferences and coordinator of the German priority research program SPP 1183 on &ldquo;Organic Computing&rdquo;. As a principal investigator of several cooperative projects in various funding programmes he is pushing the development of intelligent systems in tomorrow's energy systems and for electric mobility, shaping the new discipline of &ldquo;Energy Informatics&rdquo;, in particular as a director of the FZI Research Center for Information Technology.</p>
+                    <p><strong>Hartmut Schmeck</strong> studied at the Universities of Kiel (Germany) and Waterloo (Canada). He got his academic degrees (Dipl. Inform., Dr.rer.nat., Dr. habil) at Kiel. Since 1991 he is a Full Professor of Applied Informatics at the Karlsruhe Institute of Technology - KIT. He is (co-)author of more than 200 publications on advanced algorithms and architectures, in particular on nature-inspired methods in optimisation, algorithms for reconfigurable architectures, and, more recently, on self-organising, adaptive systems applied to energy and traffic systems. He has been program and conference chair for numerous international workshops and conferences and coordinator of the German priority research program SPP 1183 on &ldquo;Organic Computing&rdquo;. As a principal investigator of several cooperative projects in various funding programmes he is pushing the development of intelligent systems in tomorrow's energy systems and for electric mobility, shaping the new discipline of &ldquo;Energy Informatics&rdquo;, in particular as a director of the FZI Research Center for Information Technology.</p>
                 </div>
             </div>
 
@@ -223,15 +245,18 @@ Anke Weidlich (Offenburg)
             </div>-->
         </div>
 
-        <div id="speakerhighlight"></div>
+        <div id="speakerhighlight">
+            <div class="content"></div>
+            <div class="upbutton">&#9650;</div>
+        </div>
 
         <a name="registration" class="anchor"></a>
         <h3>Registration</h3>
-        Registration will be available from <em>insert date here</em>.
+        Registration is available via the website of Karlsruhe Institute of Technology (KIT).
 
         <a name="timetable" class="anchor"></a>
         <h3>Timetable</h3>
-        <div class="timetable">
+        <!--<div class="timetable">
             <table width="100%">
                 <tr>
                     <th></th>
@@ -324,6 +349,9 @@ Anke Weidlich (Offenburg)
             </table>
         </div>
         <a href="#" id="downloadTimetable">Download as PDF</a>
+        -->
+
+        <p></p>
 
         <a name="location" class="anchor"></a>
         <div id="passau">
@@ -339,6 +367,7 @@ Anke Weidlich (Offenburg)
                 <p>Bacon ipsum dolor amet meatball jerky ball tip flank landjaeger pancetta porchetta short ribs, hamburger jowl picanha t-bone bresaola corned beef. Strip steak short loin andouille ribeye pork belly pork chop flank. Brisket corned beef spare ribs pork loin ground round ribeye. Filet mignon pig short loin chuck jowl ham swine picanha shoulder leberkas frankfurter flank rump. Pancetta flank salami shank. Biltong short ribs kevin, tail sausage prosciutto pancetta t-bone. Shank fatback pork, pork loin spare ribs shoulder meatloaf leberkas strip steak meatball doner.</p>
 
                 <h4>University of Passau</h4>
+                <h4>Accommodation</h4>
             </div>
         </div>
 

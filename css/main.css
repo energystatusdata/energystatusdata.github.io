@@ -261,27 +261,59 @@ div.speaker .biography {
 }
 
 /* expanded speaker */
-#speakerhighlight .speaker {
-    border: 3px solid #70ad47;
+#speakerhighlight {
+    /*border: 3px solid #70ad47;*/
+    display:none;
     background-color: rgba(112, 173, 71, 0.1);
     padding: 1em;
-    margin: 1em 0;
-    display: block;
-    min-height: 270px;
+    margin: 0;
+    margin-top: 1em;
 }
 
 div.speaker {
     padding: 1em;
     border: 3px solid rgba(255, 255, 255, 0);
+    transition: background-color 400ms;
+
+    cursor: pointer;
 }
 
-div.speaker.expanded {
-    border: 3px solid #70ad47;
+#speakerhighlight .content div.speaker {
+    background: none;
+    cursor: auto;
+}
+
+div.speaker:hover {
+    background-color: rgba(112, 173, 71, 0.05);
+}
+
+div.downbutton, div.upbutton {
+    /*float: right;*/
+    /*border: 1px solid rgba(112, 173, 71, 1);*/
+    color: rgba(112, 173, 71, .3);
+    /*border-radius: 100%;*/
+    width: 100%;
+    height: 1em;
+    text-align: center;
+}
+
+.expanded div.downbutton, #speakerhighlight .upbutton {
+    color: rgba(112, 173, 71, .6);
+    transition: 400ms;
+    /*background: rgba(112, 173, 71, .5);*/
+}
+
+div.speaker.expanded, div.speaker.expanded:hover {
+    /*border: 3px solid #70ad47;*/
     background-color: rgba(112, 173, 71, 0.1);
+    transition: background-color 400ms;
 }
 
+#speakerhighlight div.content {
+    padding: 1em;
+}
 
-#speakerhighlight .speaker .portrait {
+#speakerhighlight .content div.speaker .portrait {
     float:left;
     display: block;
     padding-right: 3em;
