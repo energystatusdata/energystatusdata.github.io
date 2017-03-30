@@ -91,12 +91,12 @@ nav ul li a {
 
     #fixedheader:hover nav {
         transition: max-height .3s ease-out;
-        max-height: 10em;
+        max-height: 16em;
     }
 
     #fixedheader:before {
         content: "=";
-        font-size: 2em;
+        font-size: 3em;
         padding: 2em;
         display: none;
     }
@@ -160,13 +160,14 @@ nav ul li a {
 
     #fixedheader:hover nav {
         transition: max-height .3s ease-out;
-        max-height: 15em;
+        max-height: 16em;
     }
 
     #fixedheader:before {
         content: "=";
-        font-size: 20px;
-        padding: .3em .5em;
+        font-size: 2em;
+        font-weight: bold;
+        padding: .4em .5em;
         cursor: default;
 
         transition: background-color .2s, color .2s;
