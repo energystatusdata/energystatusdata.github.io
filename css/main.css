@@ -354,6 +354,11 @@ aside input, aside button {
         width: 95%;
         margin: auto 0;
     }
+
+    .speaker {
+        display: block !important;
+        text-align: center;
+    }
 }
 
 a.anchor {
