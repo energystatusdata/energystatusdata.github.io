@@ -34,6 +34,17 @@
       ga('send', 'pageview');
     </script>
 
+    <script>
+// style we only want if JavaScript is activated
+document.write(`
+<style>
+div.speaker .biography {
+    display: none;
+}
+</style>
+`);
+    </script>
+
 </head>
 <body>
 <!--[if lt IE 8]>

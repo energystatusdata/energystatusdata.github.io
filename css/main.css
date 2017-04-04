@@ -245,6 +245,10 @@ div.speaker {
     display: inline-block;
 }
 
+div.speaker .portrait {
+    text-align: center;
+}
+
 div.speaker img {
     width: 150px;
     border-radius:100%;
@@ -254,10 +258,6 @@ div.speaker img {
 div.speakername {
     text-align: center;
     padding: .5em 0;
-}
-
-div.speaker .biography {
-    display: none;
 }
 
 /* expanded speaker */
