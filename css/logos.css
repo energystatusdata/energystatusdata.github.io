@@ -7,6 +7,11 @@ div.main {
     background: white;
     text-align: center;
 }
+
+.logos a {
+    text-decoration: none;
+}
+
 .logos img {
     height: 70px;
     background-color: white;
