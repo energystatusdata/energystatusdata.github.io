@@ -201,10 +201,10 @@ div.speaker .biography {
             }
 
             $(function () {
-                var lastSelectedSpeakerElement = undefined;
+                let lastSelectedSpeakerElement = undefined;
 
                 $(".speakers .portrait").append('<div class="downbutton">&#9660; biography</div>');
-                var collapse = function (andScroll) {
+                const collapse = function (andScroll) {
                     $(".speakers div").removeClass("expanded");
                     $("#speakerhighlight .content").empty();
                     $("#speakerhighlight").css("display", "none");
@@ -216,7 +216,7 @@ div.speaker .biography {
 
                 $("#speakerhighlight").click(collapse);
                 $(".speakers div.speaker").click(function () {
-                    var expanded = $(this).hasClass("expanded");
+                    let expanded = $(this).hasClass("expanded");
                     collapse(expanded);
                     if (!expanded) {
                         $("#speakerhighlight").css("display", "block");
@@ -276,7 +276,7 @@ div.speaker .biography {
                         sources into the electricity supply system in combination with the politically motivated
                         reorganization of corporate structures and business processes. The Energy Informatics group in
                         Oldenburg develops ICT-technologies for a future reliable, robust, profitable electricity supply
-                        system based on renewable energies &ndash; the Smart Grid. Key issues are:
+                        system based on renewable energies &ndash; the Smart Grid. Key issues are:</p>
 
                     <ul>
                         <li>Open communication standards and data models to ensure the interoperability of
@@ -295,7 +295,6 @@ div.speaker .biography {
                             systems.
                         </li>
                     </ul>
-                    </p>
                 </div>
             </div>
 
@@ -368,8 +367,8 @@ div.speaker .biography {
                     <a href="https://www.openstreetmap.org/#map=11/48.5884/13.3189"><img src="img/passau.png"
                                                                                          height="250"/>
                         <br/>
-                        <small> Display bigger map.
-                    </a> &copy; OpenStreetMap.</small>
+                        <small> Display bigger map</small>
+                    </a><small>&copy; OpenStreetMap.</small>
                 </div>
 
                 <p><a href="http://www.passau.de/">Passau</a> is a city located in Lower Bavaria, Germany next to the
@@ -433,7 +432,7 @@ div.speaker .biography {
         </p>
 
         <script>$(function () {
-            var el = $(".contactmail");
+            const el = $(".contactmail");
             el.html(atob(el.data("value")));
         });</script>
     </div> <!-- #main -->
