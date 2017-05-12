@@ -65,8 +65,7 @@
         <div style="text-align:center;"><a href="https://sdq.ipd.kit.edu/registration_summer_school/">https://sdq.ipd.kit.edu/registration_summer_school/</a>
         </div>
         <p>If you encounter any technical problems with your application please contact <span
-                class="contactmail"
-                data-value="PGEgaHJlZj0ibWFpbHRvOmluZm9AZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZyI+aW5mb0BmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnPC9hPg==">info ∂ future-energy-systems.org</span>.
+                class="contactmail-registration">registration ∂ future-energy-systems.org</span>.
         </p>
         <p>Incomplete or duplicate applications are rejected immediately. There is no legal entitlement of any kind to
             participation in the summer school.</p>
@@ -112,9 +111,10 @@
         <p>There is no refund of the participation fee in case of cancellation by the participant after June
             2<sup>nd</sup>.</p>
 
-        <script>$(function () {
-            var el = $("span.contactmail");
-            el.html(atob(el.data("value")));
+        <script>$(function () { // spam prevetion
+            $(".contactmail-info").html(atob("PGEgaHJlZj0ibWFpbHRvOmluZm9AZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZyI+aW5mb0BmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnPC9hPg=="));
+            $(".contactmail-webmaster").html(atob("PGEgaHJlZj0ibWFpbHRvOndlYm1hc3RlckBmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnIj53ZWJtYXN0ZXJAZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZzwvYT4="));
+            $(".contactmail-registration").html(atob("PGEgaHJlZj0ibWFpbHRvOnJlZ2lzdHJhdGlvbkBmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnIj5yZWdpc3RyYXRpb25AZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZzwvYT4="));
         });</script>
     </div> <!-- #main -->
 </div> <!-- #main-container -->

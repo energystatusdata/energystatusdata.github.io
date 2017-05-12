@@ -43,14 +43,21 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-96611350-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
+        ga('create', 'UA-96611350-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
     </script>
 
     <script>
@@ -215,7 +222,7 @@ div.speaker .biography {
                 };
 
                 $("#speakerhighlight").click(collapse);
-                $(".speakers div.speaker").click(function () {
+                $(".speakers div.speaker.expandable").click(function () {
                     let expanded = $(this).hasClass("expanded");
                     collapse(expanded);
                     if (!expanded) {
@@ -230,7 +237,7 @@ div.speaker .biography {
         </script>
 
         <div class="speakers">
-            <div class="speaker">
+            <div class="speaker expandable">
                 <div class="portrait">
                     <img src="img/speakers/keshav.png"/>
                     <div class="speakername">Prof. Srinivasan Keshav<br/>(University of Waterloo)</div>
@@ -252,7 +259,7 @@ div.speaker .biography {
                 </div>
             </div>
 
-            <div class="speaker">
+            <div class="speaker expandable">
                 <div class="portrait">
                     <img src="img/speakers/lehnhoff.png"/>
                     <div class="speakername">Prof. Sebastian Lehnhoff<br/>(University of Oldenburg)</div>
@@ -298,7 +305,7 @@ div.speaker .biography {
                 </div>
             </div>
 
-            <div class="speaker">
+            <div class="speaker expandable">
                 <div class="portrait">
                     <img src="img/speakers/schmeck.png"/>
                     <div class="speakername">Prof. Harmut Schmeck<br/>(KIT)</div>
@@ -319,6 +326,20 @@ div.speaker .biography {
                         particular as a director of the FZI Research Center for Information Technology.</p>
                 </div>
             </div>
+            <br/>
+        </div>
+        <div class="speakers" style="text-align:center;">
+            <div class="speaker">
+                <div class="speakername">Dr. Tom Brown</div>
+                <div class="speakerurl"><a href="https://www.nworbmot.org/">Website</a></div>
+            </div>
+
+            <div class="speaker">
+                <div class="speakername">Prof. Dirk Neumann<br/>(University of Freiburg)</div>
+                <div class="speakerurl"><a
+                        href="http://portal.uni-freiburg.de/is/mitarbeiter/team/dirk-neumann?set_language=en">Website</a>
+                </div>
+            </div>
         </div>
 
         <div id="speakerhighlight">
@@ -330,16 +351,18 @@ div.speaker .biography {
 
         <a name="registration" class="anchor"></a>
         <h3>Registration</h3>
-        <div style="text-align:center;"><strong>Registration is available via the website of Karlsruhe Institute of Technology (KIT):</strong></div>
-        <div style="text-align:center; font-weight:bold;"><span style="font-size:1.5em;"><a href="https://sdq.ipd.kit.edu/registration_summer_school/">Register here!</span><br/>(https://sdq.ipd.kit.edu/registration_summer_school/)</a></div>
+        <div style="text-align:center;"><strong>Registration is available via the website of Karlsruhe Institute of
+            Technology (KIT):</strong></div>
+        <div style="text-align:center; font-weight:bold;"><span style="font-size:1.5em;"><a
+                href="https://sdq.ipd.kit.edu/registration_summer_school/">Register here!</span><br/>(https://sdq.ipd.kit.edu/registration_summer_school/)</a>
+        </div>
         <p>Primary language for the Summer school will be English, sufficient language skills are expected for
             participation. Some talks may be offered in German.
             The number of participants for the summer school is limited and participants are selected through an
             application process. Applications are accepted until June 2<sup>nd</sup>, 2017.</p>
         <p>If you have any questions regarding the application or encounter any kind of problem, please feel free to
             contact us via <span
-                    class="contactmail"
-                    data-value="PGEgaHJlZj0ibWFpbHRvOmluZm9AZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZyI+aW5mb0BmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnPC9hPg==">info ∂ future-energy-systems.org</span>.
+                    class="contactmail-registration">registration ∂ future-energy-systems.org</span>.
         </p>
 
         <p><a href="termsandconditions.html">The <strong>terms and conditions</strong> for the participation are
@@ -356,7 +379,8 @@ div.speaker .biography {
             <li>Participation in the Summer School dinner (held on one evening only)</li>
         </ul>
 
-        <p>The participation fee does not include travel cost, local transportation fares or any accommodation expenses.</p>
+        <p>The participation fee does not include travel cost, local transportation fares or any accommodation
+            expenses.</p>
 
 
         <a name="timetable" class="anchor"></a>
@@ -442,13 +466,13 @@ div.speaker .biography {
         <a name="contact" class="anchor"></a>
         <h3>Contact</h3>
         <p>If you have any questions regarding the summer school, please feel free to contact us via mail: <span
-                class="contactmail"
-                data-value="PGEgaHJlZj0ibWFpbHRvOmluZm9AZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZyI+aW5mb0BmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnPC9hPg==">info ∂ future-energy-systems.org</span>
+                class="contactmail-info">info ∂ future-energy-systems.org</span>
         </p>
 
         <script>$(function () { // spam prevetion
-            const el = $(".contactmail");
-            el.html(atob(el.data("value")));
+            $(".contactmail-info").html(atob("PGEgaHJlZj0ibWFpbHRvOmluZm9AZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZyI+aW5mb0BmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnPC9hPg=="));
+            $(".contactmail-webmaster").html(atob("PGEgaHJlZj0ibWFpbHRvOndlYm1hc3RlckBmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnIj53ZWJtYXN0ZXJAZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZzwvYT4="));
+            $(".contactmail-registration").html(atob("PGEgaHJlZj0ibWFpbHRvOnJlZ2lzdHJhdGlvbkBmdXR1cmUtZW5lcmd5LXN5c3RlbXMub3JnIj5yZWdpc3RyYXRpb25AZnV0dXJlLWVuZXJneS1zeXN0ZW1zLm9yZzwvYT4="));
         });</script>
     </div> <!-- #main -->
 </div> <!-- #main-container -->
