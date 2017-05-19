@@ -53,7 +53,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -96,7 +95,6 @@ body {
 /* ==============
     MOBILE: Menu
    ============== */
-
 
 /* ==============
     MOBILE: Main
@@ -149,7 +147,6 @@ h1.title {
     font-size: 2em;
 }
 
-
 h3 {
     color: #1B3D0D;
     font-family: sans-serif;
@@ -170,7 +167,6 @@ h3 {
         margin: 0;
     }
 
-
     .main aside {
         text-align: center;
     }
@@ -180,7 +176,6 @@ h3 {
     .main aside h3 {
         margin: 0;
     }
-
 
     .main aside {
         padding: 1em;
@@ -224,7 +219,7 @@ h3 {
 .header-container,
 .footer-container,
 .main aside {
-/*    background: white;*/
+    /*    background: white;*/
 }
 
 a {
@@ -243,6 +238,8 @@ div.speakers * {
 
 div.speaker {
     display: inline-block;
+    min-width: 250px;
+    margin: 1.75em 1em;
 }
 
 div.speaker .portrait {
@@ -251,7 +248,7 @@ div.speaker .portrait {
 
 div.speaker img {
     width: 150px;
-    border-radius:100%;
+    border-radius: 100%;
     padding: 0 30px;
 }
 
@@ -263,7 +260,7 @@ div.speakername {
 /* expanded speaker */
 #speakerhighlight {
     /*border: 3px solid #70ad47;*/
-    display:none;
+    display: none;
     background-color: rgba(112, 173, 71, 0.1);
     padding: 1em;
     margin: 0;
@@ -314,7 +311,7 @@ div.speaker.expanded, div.speaker.expanded:hover {
 }
 
 #speakerhighlight .content div.speaker .portrait {
-    float:left;
+    float: left;
     display: block;
     padding-right: 3em;
     padding-bottom: 3em;
@@ -325,6 +322,7 @@ div.speaker.expanded, div.speaker.expanded:hover {
 #speakerhighlight div.speaker .biography {
     display: block;
 }
+
 /* close expanded speaker */
 
 aside input, aside button {
@@ -376,36 +374,33 @@ a.anchor {
 
 @media only screen and (min-width: 480px) {
 
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
+    /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
 }
 
 @media only screen and (min-width: 768px) {
 
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
+    /* ====================
+        WIDE: CSS3 Effects
+       ==================== */
     .header-container,
     .main aside {
         -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
+        -moz-box-shadow: 0 5px 10px #aaa;
+        box-shadow: 0 5px 10px #aaa;
     }
 
-/* ============
-    WIDE: Menu
-   ============ */
-
+    /* ============
+        WIDE: Menu
+       ============ */
     .title {
         float: left;
     }
 
-/* ============
-    WIDE: Main
-   ============ */
-
+    /* ============
+        WIDE: Main
+       ============ */
     .main article {
         float: left;
         width: 57%;
@@ -419,10 +414,9 @@ a.anchor {
 
 @media only screen and (min-width: 1140px) {
 
-/* ===============
-    Maximal Width
-   =============== */
-
+    /* ===============
+        Maximal Width
+       =============== */
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
