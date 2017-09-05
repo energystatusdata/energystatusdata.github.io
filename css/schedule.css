@@ -1,0 +1,33 @@
+.schedule {
+
+}
+
+.schedule th, .schedule td {
+    /*border-bottom: 1px solid #ddd;*/
+    padding: 10px;
+    border: 5px solid white;
+}
+
+.event-talk {
+    background-color: #c8d1e6;
+}
+
+.event-break {
+    background-color: #f5e3bc;
+}
+
+.event-workshop {
+    background-color: #fef8b9;
+}
+
+.event-misc {
+    background-color: #d9d9d9;
+}
+
+.event-social {
+    background-color: #daecc5;
+}
+
+.event-keynote {
+    background-color: #a3b2d5;
+}
