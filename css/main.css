@@ -333,22 +333,22 @@ aside input, aside button {
     border-top: 0;
 }
 
-#map {
+#themap {
     float: right;
     margin-left: 1em;
 }
 
-#map iframe {
+#themap iframe {
     width: 425px;
 }
 
 @media only screen and (max-width: 767px) {
-    #map {
+    #themap {
         float: none;
         text-align: center;
     }
 
-    #map iframe {
+    #themap iframe {
         width: 95%;
         margin: auto 0;
     }
