@@ -4,8 +4,9 @@
 
 .schedule th, .schedule td {
     /*border-bottom: 1px solid #ddd;*/
-    padding: 10px;
+    padding: 0.5%;
     border: 5px solid white;
+    text-align: center;
 }
 
 .event-talk {
