@@ -91,7 +91,7 @@ nav ul li a {
 
     #fixedheader:hover nav {
         transition: max-height .3s ease-out;
-        max-height: 16em;
+        max-height: 30em;
     }
 
     #fixedheader:before {
@@ -160,7 +160,7 @@ nav ul li a {
 
     #fixedheader:hover nav {
         transition: max-height .3s ease-out;
-        max-height: 16em;
+        max-height: 18em;
     }
 
     #fixedheader:before {
