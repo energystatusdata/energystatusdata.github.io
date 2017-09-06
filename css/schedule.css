@@ -3,6 +3,10 @@
     table-layout: fixed;
 }
 
+.schedule a {
+    color: #1B3D0D;
+}
+
 .schedule th, .schedule td {
     /*border-bottom: 1px solid #ddd;*/
     padding: 0.25em;
