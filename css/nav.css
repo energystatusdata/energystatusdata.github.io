@@ -11,8 +11,8 @@ nav ul {
     margin: 0;
     padding: 0;
 
-    text-align: justify;
-    text-align-last: justify;
+    text-align: left;
+    text-align-last: left;
 }
 
 nav ul li {

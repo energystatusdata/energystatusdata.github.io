@@ -147,6 +147,15 @@ h1.title {
     font-size: 2em;
 }
 
+h2.title {
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+    font-size: 2em;
+}
+
+
 h3 {
     color: #1B3D0D;
     font-family: sans-serif;
@@ -197,8 +206,8 @@ h3 {
 @media only screen and (min-width: 1140px) {
     h1.title {
         font-size: 3.5em;
-        text-align: justify;
-        text-align-last: justify;
+        text-align: center;
+        text-align-last: center;
     }
 
     #subtitle, #theDate {
@@ -395,7 +404,7 @@ a.anchor {
         WIDE: Menu
        ============ */
     .title {
-        float: left;
+        float: none;
     }
 
     /* ============
